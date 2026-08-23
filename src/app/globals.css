@@ -150,11 +150,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .atmos-top p { margin: 0; display: flex; gap: .85rem; color: rgba(247,246,247,.58); }
 .atmos-top p b { color: #f7f6f7; font-weight: 500; }
 .atmos-layout { flex: 1; display: grid; align-content: center; gap: .8rem; }
-.atmos-temp { display: flex; align-items: flex-start; }
+.atmos-current { display: flex; flex-direction: column; align-items: flex-start; }
+.atmos-temp { margin-bottom: 1.35rem; display: flex; align-items: flex-start; }
 .atmos-temp strong { font-family: Georgia, "Times New Roman", serif; font-size: 8rem; font-weight: 400; line-height: .76; letter-spacing: -.09em; }
 .atmos-temp > span { margin: -.25rem 0 0 .35rem; font: 300 1.9rem Georgia, serif; color: rgba(247,246,247,.65); }
 .atmos-condition, .atmos-summary, .atmos-forecast-title, .atmos-forecast-grid span { font-family: var(--font-geist-mono), monospace; }
-.atmos-condition { margin: 1rem 0 .8rem; font-size: .46rem; letter-spacing: .18em; }
+.atmos-condition { margin: 0 0 .8rem; font-size: .46rem; letter-spacing: .18em; }
 .atmos-summary { max-width: 17rem; display: flex; justify-content: space-between; font-size: .41rem; letter-spacing: .08em; color: rgba(247,246,247,.62); }
 .atmos-narrative { max-width: 18rem; }
 .atmos-narrative p { margin: 0; font: 400 1.08rem/1.08 Georgia, "Times New Roman", serif; }
@@ -232,7 +233,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .atmos-layout { grid-template-columns: .9fr 1.1fr; gap: 3.5rem; align-items: center; }
   .atmos-temp strong { font-size: clamp(9rem, 14vw, 13rem); }
   .atmos-temp > span { margin-top: -.1rem; font-size: 2.6rem; }
-  .atmos-condition { margin-left: 48%; }
+  .atmos-temp { margin-bottom: 1.75rem; }
   .atmos-summary { margin-top: 1.3rem; }
   .atmos-narrative { max-width: 22rem; }
   .atmos-narrative p { font-size: 2rem; }
