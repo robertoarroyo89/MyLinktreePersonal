@@ -145,29 +145,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .atmos-sky { z-index: -3; background: linear-gradient(180deg, #222e43 0%, #353b50 36%, #47475c 67%, #926c58 100%); }
 .atmos-haze { z-index: -2; background: radial-gradient(90% 46% at 78% 100%, rgba(232,183,161,.36), transparent 68%), radial-gradient(80% 55% at 8% 22%, rgba(116,130,165,.25), transparent 72%), linear-gradient(180deg, rgba(4,8,14,.5), transparent 38%, rgba(4,8,14,.2)); animation: weather-light 9s ease-in-out infinite alternate; }
 .atmos-grain { z-index: -1; opacity: .2; background-image: repeating-radial-gradient(circle at 37% 42%, rgba(255,255,255,.13) 0 1px, transparent 1px 4px); background-size: 6px 6px; mix-blend-mode: soft-light; }
-.atmos-shell { position: relative; z-index: 1; height: 100%; padding: 1.1rem; display: flex; flex-direction: column; text-shadow: 0 1px 1px rgba(0,0,0,.18); }
-.atmos-top { display: flex; align-items: center; justify-content: space-between; font: 500 .43rem var(--font-geist-mono), monospace; letter-spacing: .14em; }
-.atmos-top p { margin: 0; display: flex; gap: .85rem; color: rgba(247,246,247,.58); }
-.atmos-top p b { color: #f7f6f7; font-weight: 500; }
-.atmos-layout { flex: 1; display: grid; align-content: center; gap: .8rem; }
-.atmos-current { display: flex; flex-direction: column; align-items: flex-start; }
-.atmos-temp { margin-bottom: 1.35rem; display: flex; align-items: flex-start; }
-.atmos-temp strong { font-family: Georgia, "Times New Roman", serif; font-size: 8rem; font-weight: 400; line-height: .76; letter-spacing: -.09em; }
-.atmos-temp > span { margin: -.25rem 0 0 .35rem; font: 300 1.9rem Georgia, serif; color: rgba(247,246,247,.65); }
-.atmos-condition, .atmos-summary, .atmos-forecast-title, .atmos-forecast-grid span { font-family: var(--font-geist-mono), monospace; }
-.atmos-condition { margin: 0 0 .8rem; font-size: .46rem; letter-spacing: .18em; }
-.atmos-summary { max-width: 17rem; display: flex; justify-content: space-between; font-size: .41rem; letter-spacing: .08em; color: rgba(247,246,247,.62); }
-.atmos-narrative { max-width: 18rem; }
-.atmos-narrative p { margin: 0; font: 400 1.08rem/1.08 Georgia, "Times New Roman", serif; }
-.atmos-narrative span { display: block; margin-top: .45rem; font-size: .54rem; line-height: 1.45; color: rgba(247,246,247,.58); }
-.atmos-forecast { padding: .75rem; background: rgba(7,13,23,.18); backdrop-filter: blur(6px); }
-.atmos-forecast-title { display: flex; justify-content: space-between; font-size: .39rem; letter-spacing: .13em; color: rgba(247,246,247,.55); }
-.atmos-forecast-grid { margin-top: .7rem; display: grid; grid-template-columns: repeat(4,1fr); gap: .3rem; }
-.atmos-forecast-grid div { min-width: 0; padding: .5rem .25rem; display: grid; justify-items: center; gap: .4rem; background: rgba(247,246,247,.045); }
-.atmos-forecast-grid span { font-size: .35rem; letter-spacing: .08em; color: rgba(247,246,247,.55); }
-.atmos-forecast-grid i { position: relative; width: 1rem; height: .48rem; display: block; border-radius: 1rem; background: rgba(247,246,247,.5); box-shadow: -.38rem .08rem 0 -.03rem rgba(247,246,247,.32); }
-.atmos-forecast-grid i::before { content: ""; position: absolute; width: .48rem; height: .48rem; top: -.22rem; right: -.18rem; border-radius: 50%; background: #e8b7a1; box-shadow: 0 0 .8rem rgba(232,183,161,.35); }
-.atmos-forecast-grid b { font: 400 1rem Georgia, "Times New Roman", serif; }
+.atmos-minimal { position: relative; z-index: 1; height: 100%; display: grid; place-items: center; }
+.atmos-sun { position: absolute; top: 16%; right: 13%; width: clamp(5rem, 23vw, 9rem); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 42% 38%, #f3d8c9 0, #e8b7a1 38%, rgba(232,183,161,.14) 70%, transparent 72%); filter: blur(.2px); box-shadow: 0 0 5rem rgba(232,183,161,.24); animation: sun-breathe 7s ease-in-out infinite alternate; }
+.atmos-cloud { position: absolute; border-radius: 50%; background: rgba(205,211,225,.16); filter: blur(13px); }
+.atmos-cloud-one { top: 30%; left: -10%; width: 75%; height: 18%; transform: rotate(-8deg); }
+.atmos-cloud-two { right: -18%; bottom: 19%; width: 72%; height: 16%; transform: rotate(7deg); opacity: .7; }
+.atmos-minimal-temp { position: relative; z-index: 2; display: flex; align-items: flex-start; transform: translate(-7%, 7%); text-shadow: 0 1rem 4rem rgba(3,7,13,.28); }
+.atmos-minimal-temp strong { font-family: Georgia, "Times New Roman", serif; font-size: clamp(9rem, 37vw, 13rem); font-weight: 400; line-height: .75; letter-spacing: -.1em; }
+.atmos-minimal-temp span { margin: -.3rem 0 0 .4rem; font: 300 2rem Georgia, "Times New Roman", serif; color: rgba(247,246,247,.68); }
 
 .about-section { padding: 4.5rem var(--gutter) 5.5rem; border-top: 1px solid var(--line); }
 .about-kicker { padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); font-size: .55rem; color: var(--muted); }
@@ -194,6 +179,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes bars { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes wave { from { transform: scaleY(.55); opacity: .5; } to { transform: scaleY(1); opacity: .9; } }
 @keyframes weather-light { from { transform: translate3d(-8%, 3%, 0) scale(.95); } to { transform: translate3d(5%, -2%, 0) scale(1.08); } }
+@keyframes sun-breathe { from { transform: scale(.94); opacity: .78; } to { transform: scale(1.06); opacity: 1; } }
 
 @media (min-width: 900px) {
   .hero-copy h1 { font-size: clamp(6.5rem, 11.9vw, 11rem); }
@@ -229,21 +215,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .mic span { width: 5rem; height: 8rem; border-radius: 3rem; }
   .lesson-card { right: 4%; bottom: 9%; width: min(57%, 25rem); padding: 1.5rem; }
   .lesson-card strong { font-size: 3rem; }
-  .atmos-shell { padding: 1.5rem 1.7rem 1.7rem; }
-  .atmos-layout { grid-template-columns: .9fr 1.1fr; gap: 3.5rem; align-items: center; }
-  .atmos-temp strong { font-size: clamp(9rem, 14vw, 13rem); }
-  .atmos-temp > span { margin-top: -.1rem; font-size: 2.6rem; }
-  .atmos-temp { margin-bottom: 1.75rem; }
-  .atmos-summary { margin-top: 1.3rem; }
-  .atmos-narrative { max-width: 22rem; }
-  .atmos-narrative p { font-size: 2rem; }
-  .atmos-narrative span { margin-top: .8rem; font-size: .72rem; }
-  .atmos-forecast { padding: 1rem; }
-  .atmos-forecast-grid { margin-top: 1rem; gap: .55rem; }
-  .atmos-forecast-grid div { padding: .9rem .5rem; gap: .65rem; }
-  .atmos-forecast-grid span { font-size: .43rem; }
-  .atmos-forecast-grid i { width: 1.5rem; height: .65rem; }
-  .atmos-forecast-grid b { font-size: 1.45rem; }
+  .atmos-sun { top: 13%; right: 14%; width: min(15vw, 11rem); }
+  .atmos-minimal-temp { transform: translate(-9%, 6%); }
+  .atmos-minimal-temp strong { font-size: clamp(13rem, 22vw, 19rem); }
+  .atmos-minimal-temp span { margin-top: -.15rem; font-size: 3rem; }
   .about-section { padding-top: 6rem; padding-bottom: 8rem; }
   .about-grid { grid-template-columns: 1.1fr .9fr; gap: 8vw; padding-top: 7rem; align-items: end; }
   .about-grid h2 { font-size: clamp(6rem, 10vw, 10rem); }
