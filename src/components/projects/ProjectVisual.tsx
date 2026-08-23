@@ -54,14 +54,19 @@ function AtmosVisual() {
           <div className="atmos-temp"><strong>31</strong><span>°</span></div>
           <p className="atmos-condition">NUBES Y CLAROS</p>
           <div className="atmos-summary"><span>SENSACIÓN&nbsp; 29°</span><span>MÁX&nbsp; 33°</span><span>MÍN&nbsp; 20°</span></div>
-          <p className="atmos-copy">Tarde calurosa con nubes y claros.</p>
         </div>
-        <div className="atmos-detail">
-          <div className="atmos-section-title"><span>01&nbsp; PRÓXIMAS HORAS</span><b>24 H</b></div>
-          <div className="atmos-chart"><i /><i /><i /><i /><i /><em /></div>
-          <div className="atmos-hours"><span>20</span><span>00</span><span>04</span><span>08</span><span>12</span><span>16</span></div>
-          <div className="atmos-section-title second"><span>02&nbsp; AHORA MISMO</span></div>
-          <dl><div><dt>VIENTO</dt><dd>9 km/h</dd></div><div><dt>HUMEDAD</dt><dd>25 %</dd></div><div><dt>ÍNDICE UV</dt><dd>0 · BAJO</dd></div></dl>
+        <div className="atmos-narrative">
+          <p>Tarde calurosa con nubes y claros.</p>
+          <span>Refrescará bastante al caer el sol, hasta 22°.</span>
+        </div>
+      </div>
+      <div className="atmos-forecast">
+        <div className="atmos-forecast-title"><span>PRÓXIMAS HORAS</span><span>24 H</span></div>
+        <div className="atmos-forecast-grid">
+          <div><span>AHORA</span><i /><b>31°</b></div>
+          <div><span>00:00</span><i /><b>27°</b></div>
+          <div><span>04:00</span><i /><b>22°</b></div>
+          <div><span>08:00</span><i /><b>23°</b></div>
         </div>
       </div>
     </div>

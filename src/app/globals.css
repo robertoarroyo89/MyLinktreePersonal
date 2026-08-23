@@ -146,37 +146,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .atmos-haze { z-index: -2; background: radial-gradient(90% 46% at 78% 100%, rgba(232,183,161,.36), transparent 68%), radial-gradient(80% 55% at 8% 22%, rgba(116,130,165,.25), transparent 72%), linear-gradient(180deg, rgba(4,8,14,.5), transparent 38%, rgba(4,8,14,.2)); animation: weather-light 9s ease-in-out infinite alternate; }
 .atmos-grain { z-index: -1; opacity: .2; background-image: repeating-radial-gradient(circle at 37% 42%, rgba(255,255,255,.13) 0 1px, transparent 1px 4px); background-size: 6px 6px; mix-blend-mode: soft-light; }
 .atmos-shell { position: relative; z-index: 1; height: 100%; padding: 1.1rem; display: flex; flex-direction: column; text-shadow: 0 1px 1px rgba(0,0,0,.18); }
-.atmos-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: .9rem; border-bottom: 1px solid rgba(247,246,247,.22); font: 500 .43rem var(--font-geist-mono), monospace; letter-spacing: .14em; }
+.atmos-top { display: flex; align-items: center; justify-content: space-between; font: 500 .43rem var(--font-geist-mono), monospace; letter-spacing: .14em; }
 .atmos-top p { margin: 0; display: flex; gap: .85rem; color: rgba(247,246,247,.58); }
 .atmos-top p b { color: #f7f6f7; font-weight: 500; }
-.atmos-layout { flex: 1; display: grid; grid-template-rows: 1fr auto; gap: 1rem; }
-.atmos-current { align-self: center; }
+.atmos-layout { flex: 1; display: grid; align-content: center; gap: .8rem; }
 .atmos-temp { display: flex; align-items: flex-start; }
 .atmos-temp strong { font-family: Georgia, "Times New Roman", serif; font-size: 8rem; font-weight: 400; line-height: .76; letter-spacing: -.09em; }
 .atmos-temp > span { margin: -.25rem 0 0 .35rem; font: 300 1.9rem Georgia, serif; color: rgba(247,246,247,.65); }
-.atmos-condition, .atmos-summary, .atmos-section-title, .atmos-hours, .atmos-detail dl { font-family: var(--font-geist-mono), monospace; }
+.atmos-condition, .atmos-summary, .atmos-forecast-title, .atmos-forecast-grid span { font-family: var(--font-geist-mono), monospace; }
 .atmos-condition { margin: 1rem 0 .8rem; font-size: .46rem; letter-spacing: .18em; }
-.atmos-summary { max-width: 17rem; padding-top: .75rem; display: flex; justify-content: space-between; border-top: 1px solid rgba(247,246,247,.24); font-size: .41rem; letter-spacing: .08em; color: rgba(247,246,247,.62); }
-.atmos-copy { max-width: 14rem; margin: 1rem 0 0; font: 400 1.05rem/1.08 Georgia, "Times New Roman", serif; }
-.atmos-detail { min-width: 0; padding-bottom: .3rem; }
-.atmos-section-title { display: flex; justify-content: space-between; align-items: center; font-size: .41rem; font-weight: 400; letter-spacing: .13em; color: rgba(247,246,247,.72); }
-.atmos-section-title::after { content: ""; height: 1px; flex: 1; margin: 0 .65rem; background: rgba(247,246,247,.2); }
-.atmos-section-title b { order: 2; font-weight: 400; }
-.atmos-chart { position: relative; height: 4.3rem; margin: .75rem .2rem 0; border-bottom: 1px solid rgba(247,246,247,.19); }
-.atmos-chart i { position: absolute; height: 1px; background: rgba(247,246,247,.86); transform-origin: left center; }
-.atmos-chart i:nth-child(1) { left: 0; top: 28%; width: 20%; transform: rotate(8deg); }
-.atmos-chart i:nth-child(2) { left: 19%; top: 40%; width: 20%; transform: rotate(5deg); }
-.atmos-chart i:nth-child(3) { left: 38%; top: 50%; width: 20%; transform: rotate(1deg); }
-.atmos-chart i:nth-child(4) { left: 57%; top: 49%; width: 20%; transform: rotate(-10deg); }
-.atmos-chart i:nth-child(5) { left: 76%; top: 34%; width: 23%; transform: rotate(2deg); }
-.atmos-chart em { position: absolute; left: -2px; top: calc(28% - 3px); width: 7px; height: 7px; border-radius: 50%; background: #f7f6f7; box-shadow: 0 0 0 .3rem rgba(247,246,247,.12); animation: breathe 2.8s ease-in-out infinite; }
-.atmos-hours { padding-top: .5rem; display: flex; justify-content: space-between; font-size: .37rem; color: rgba(247,246,247,.49); }
-.atmos-section-title.second { margin-top: 1.3rem; }
-.atmos-detail dl { margin: .45rem 0 0; }
-.atmos-detail dl div { padding: .48rem 0; display: flex; align-items: center; border-bottom: 1px dotted rgba(247,246,247,.22); }
-.atmos-detail dt, .atmos-detail dd { margin: 0; font-size: .4rem; letter-spacing: .08em; }
-.atmos-detail dt { color: rgba(247,246,247,.6); }
-.atmos-detail dd { margin-left: auto; color: rgba(247,246,247,.92); }
+.atmos-summary { max-width: 17rem; display: flex; justify-content: space-between; font-size: .41rem; letter-spacing: .08em; color: rgba(247,246,247,.62); }
+.atmos-narrative { max-width: 18rem; }
+.atmos-narrative p { margin: 0; font: 400 1.08rem/1.08 Georgia, "Times New Roman", serif; }
+.atmos-narrative span { display: block; margin-top: .45rem; font-size: .54rem; line-height: 1.45; color: rgba(247,246,247,.58); }
+.atmos-forecast { padding: .75rem; background: rgba(7,13,23,.18); backdrop-filter: blur(6px); }
+.atmos-forecast-title { display: flex; justify-content: space-between; font-size: .39rem; letter-spacing: .13em; color: rgba(247,246,247,.55); }
+.atmos-forecast-grid { margin-top: .7rem; display: grid; grid-template-columns: repeat(4,1fr); gap: .3rem; }
+.atmos-forecast-grid div { min-width: 0; padding: .5rem .25rem; display: grid; justify-items: center; gap: .4rem; background: rgba(247,246,247,.045); }
+.atmos-forecast-grid span { font-size: .35rem; letter-spacing: .08em; color: rgba(247,246,247,.55); }
+.atmos-forecast-grid i { position: relative; width: 1rem; height: .48rem; display: block; border-radius: 1rem; background: rgba(247,246,247,.5); box-shadow: -.38rem .08rem 0 -.03rem rgba(247,246,247,.32); }
+.atmos-forecast-grid i::before { content: ""; position: absolute; width: .48rem; height: .48rem; top: -.22rem; right: -.18rem; border-radius: 50%; background: #e8b7a1; box-shadow: 0 0 .8rem rgba(232,183,161,.35); }
+.atmos-forecast-grid b { font: 400 1rem Georgia, "Times New Roman", serif; }
 
 .about-section { padding: 4.5rem var(--gutter) 5.5rem; border-top: 1px solid var(--line); }
 .about-kicker { padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); font-size: .55rem; color: var(--muted); }
@@ -238,18 +228,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .mic span { width: 5rem; height: 8rem; border-radius: 3rem; }
   .lesson-card { right: 4%; bottom: 9%; width: min(57%, 25rem); padding: 1.5rem; }
   .lesson-card strong { font-size: 3rem; }
-  .atmos-shell { padding: 1.5rem 1.7rem; }
-  .atmos-layout { grid-template-columns: .78fr 1.22fr; grid-template-rows: 1fr; gap: 3.2rem; align-items: center; }
-  .atmos-current { align-self: center; }
+  .atmos-shell { padding: 1.5rem 1.7rem 1.7rem; }
+  .atmos-layout { grid-template-columns: .9fr 1.1fr; gap: 3.5rem; align-items: center; }
   .atmos-temp strong { font-size: clamp(9rem, 14vw, 13rem); }
   .atmos-temp > span { margin-top: -.1rem; font-size: 2.6rem; }
   .atmos-condition { margin-left: 48%; }
   .atmos-summary { margin-top: 1.3rem; }
-  .atmos-copy { max-width: 19rem; margin-top: 1.6rem; font-size: 1.45rem; }
-  .atmos-detail { align-self: center; }
-  .atmos-chart { height: 8rem; margin-top: 1.25rem; }
-  .atmos-section-title.second { margin-top: 2.2rem; }
-  .atmos-detail dl div { padding: .75rem 0; }
+  .atmos-narrative { max-width: 22rem; }
+  .atmos-narrative p { font-size: 2rem; }
+  .atmos-narrative span { margin-top: .8rem; font-size: .72rem; }
+  .atmos-forecast { padding: 1rem; }
+  .atmos-forecast-grid { margin-top: 1rem; gap: .55rem; }
+  .atmos-forecast-grid div { padding: .9rem .5rem; gap: .65rem; }
+  .atmos-forecast-grid span { font-size: .43rem; }
+  .atmos-forecast-grid i { width: 1.5rem; height: .65rem; }
+  .atmos-forecast-grid b { font-size: 1.45rem; }
   .about-section { padding-top: 6rem; padding-bottom: 8rem; }
   .about-grid { grid-template-columns: 1.1fr .9fr; gap: 8vw; padding-top: 7rem; align-items: end; }
   .about-grid h2 { font-size: clamp(6rem, 10vw, 10rem); }
