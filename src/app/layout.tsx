@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/data/site";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: site.title,
   description: site.description,
   applicationName: "ROBER.",
