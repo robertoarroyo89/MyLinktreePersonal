@@ -50,7 +50,10 @@ function AtmosVisual() {
     <div className="atmos-minimal">
       <div className="atmos-sun" />
       <div className="atmos-cloud atmos-cloud-one" /><div className="atmos-cloud atmos-cloud-two" />
-      <div className="atmos-minimal-temp"><strong>31</strong><span>°</span></div>
+      <div className="atmos-minimal-temp"><strong>31<sup>°</sup></strong></div>
+      <div className="atmos-dock">
+        <div><i /><b>31°</b></div><div><i /><b>27°</b></div><div><i /><b>22°</b></div><div><i /><b>23°</b></div>
+      </div>
     </div>
   </div>;
 }

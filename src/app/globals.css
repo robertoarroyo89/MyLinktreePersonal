@@ -150,9 +150,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .atmos-cloud { position: absolute; border-radius: 50%; background: rgba(205,211,225,.16); filter: blur(13px); }
 .atmos-cloud-one { top: 30%; left: -10%; width: 75%; height: 18%; transform: rotate(-8deg); }
 .atmos-cloud-two { right: -18%; bottom: 19%; width: 72%; height: 16%; transform: rotate(7deg); opacity: .7; }
-.atmos-minimal-temp { position: relative; z-index: 2; display: flex; align-items: flex-start; transform: translate(-7%, 7%); text-shadow: 0 1rem 4rem rgba(3,7,13,.28); }
+.atmos-minimal-temp { position: relative; z-index: 2; display: flex; align-items: flex-start; transform: translate(-7%, -4%); text-shadow: 0 1rem 4rem rgba(3,7,13,.28); }
 .atmos-minimal-temp strong { font-family: Georgia, "Times New Roman", serif; font-size: clamp(9rem, 37vw, 13rem); font-weight: 400; line-height: .75; letter-spacing: -.1em; }
-.atmos-minimal-temp span { margin: -.3rem 0 0 .4rem; font: 300 2rem Georgia, "Times New Roman", serif; color: rgba(247,246,247,.68); }
+.atmos-minimal-temp sup { display: inline-block; margin-left: .14em; font-size: .16em; font-weight: 300; line-height: 1; color: rgba(247,246,247,.68); letter-spacing: 0; vertical-align: top; transform: translateY(1.05em); }
+.atmos-dock { position: absolute; z-index: 3; left: 50%; bottom: 1rem; width: calc(100% - 2rem); padding: .45rem; display: grid; grid-template-columns: repeat(4,1fr); gap: .3rem; background: rgba(8,14,25,.22); box-shadow: 0 1.2rem 3rem rgba(3,7,13,.16), inset 0 1px rgba(255,255,255,.06); backdrop-filter: blur(12px); transform: translateX(-50%); }
+.atmos-dock div { min-width: 0; padding: .45rem .2rem; display: grid; place-items: center; gap: .35rem; background: rgba(247,246,247,.035); }
+.atmos-dock i { position: relative; width: 1.15rem; height: .52rem; display: block; border-radius: 1rem; background: rgba(218,222,232,.58); box-shadow: -.4rem .09rem 0 -.04rem rgba(218,222,232,.34); }
+.atmos-dock i::before { content: ""; position: absolute; top: -.25rem; right: -.22rem; width: .52rem; height: .52rem; border-radius: 50%; background: #e8b7a1; box-shadow: 0 0 1rem rgba(232,183,161,.4); }
+.atmos-dock div:nth-child(2) i::before { opacity: .35; }
+.atmos-dock div:nth-child(3) i::before { display: none; }
+.atmos-dock div:nth-child(3) i::after { content: ""; position: absolute; left: .1rem; top: .75rem; width: 2px; height: 5px; border-radius: 1rem; background: rgba(203,215,236,.65); box-shadow: .45rem 2px rgba(203,215,236,.5), .85rem 0 rgba(203,215,236,.6); transform: rotate(12deg); }
+.atmos-dock b { font: 400 1.05rem Georgia, "Times New Roman", serif; }
 
 .about-section { padding: 4.5rem var(--gutter) 5.5rem; border-top: 1px solid var(--line); }
 .about-kicker { padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); font-size: .55rem; color: var(--muted); }
@@ -216,9 +224,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .lesson-card { right: 4%; bottom: 9%; width: min(57%, 25rem); padding: 1.5rem; }
   .lesson-card strong { font-size: 3rem; }
   .atmos-sun { top: 13%; right: 14%; width: min(15vw, 11rem); }
-  .atmos-minimal-temp { transform: translate(-9%, 6%); }
+  .atmos-minimal-temp { transform: translate(-9%, -3%); }
   .atmos-minimal-temp strong { font-size: clamp(13rem, 22vw, 19rem); }
-  .atmos-minimal-temp span { margin-top: -.15rem; font-size: 3rem; }
+  .atmos-dock { bottom: 1.7rem; width: min(72%, 35rem); padding: .65rem; gap: .55rem; }
+  .atmos-dock div { padding: .7rem .35rem; gap: .55rem; }
+  .atmos-dock i { width: 1.5rem; height: .65rem; }
+  .atmos-dock b { font-size: 1.35rem; }
   .about-section { padding-top: 6rem; padding-bottom: 8rem; }
   .about-grid { grid-template-columns: 1.1fr .9fr; gap: 8vw; padding-top: 7rem; align-items: end; }
   .about-grid h2 { font-size: clamp(6rem, 10vw, 10rem); }
