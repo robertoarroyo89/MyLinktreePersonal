@@ -1,0 +1,66 @@
+import type { ProjectVisual as ProjectVisualName } from "@/types/project";
+
+function LateTapVisual() {
+  return <div className="visual-scene latetap-scene" aria-hidden="true">
+    <div className="slot-card slot-one"><span>HOY</span><strong>18:30</strong><small><i /> Disponible ahora</small></div>
+    <div className="tap-orbit"><div className="tap-button">TAP</div></div>
+    <div className="slot-card slot-two"><span>ÚLTIMA HORA</span><strong>−30%</strong><small>Queda 1 hueco</small></div>
+  </div>;
+}
+
+function AzaharVisual() {
+  return <div className="visual-scene azahar-scene" aria-hidden="true">
+    <div className="botanical botanical-one"><span /><span /><span /></div>
+    <div className="botanical botanical-two"><span /><span /></div>
+    <div className="azahar-window">
+      <div className="window-top"><span>AZAHAR</span><span>24 · 05 · 26</span></div>
+      <div className="azahar-heading"><small>PRÓXIMO PASO</small><strong>Todo en su sitio.</strong></div>
+      <div className="planner-grid">
+        <div><span>INVITADOS</span><strong>118</strong><small>94 confirmados</small></div>
+        <div><span>PRESUPUESTO</span><strong>72%</strong><small>Todo bajo control</small></div>
+      </div>
+      <ul><li><i /> Confirmar menú de prueba <b>HOY</b></li><li><i /> Revisar distribución de mesas <b>JUE</b></li><li><i /> Llamar a fotografía <b>VIE</b></li></ul>
+    </div>
+  </div>;
+}
+
+function FlujoVisual() {
+  return <div className="visual-scene flujo-scene" aria-hidden="true">
+    <div className="balance-card"><span>BALANCE TOTAL</span><strong>12.480,20 €</strong><small>+8,4% este mes</small></div>
+    <div className="chart-card">
+      <div className="chart-top"><span>VISTA GENERAL</span><b>6 MESES</b></div>
+      <div className="bar-chart">{[42, 56, 48, 68, 61, 86, 74].map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}</div>
+      <div className="chart-labels"><span>FEB</span><span>ABR</span><span>JUN</span><span>AGO</span></div>
+    </div>
+    <div className="transaction-list"><span>ÚLTIMOS MOVIMIENTOS</span><p><i>••</i><b>Suscripción producto</b><em>−12,99 €</em></p><p><i>↙</i><b>Ingreso proyecto</b><em>+850,00 €</em></p></div>
+  </div>;
+}
+
+function OratoriaVisual() {
+  return <div className="visual-scene oratoria-scene" aria-hidden="true">
+    <div className="stage-rings"><i /><i /><i /></div>
+    <div className="mic"><span /><b /></div>
+    <div className="lesson-card"><small>LECCIÓN 04 / 12</small><strong>El poder<br />de una pausa.</strong><div className="waveform">{[30, 65, 42, 84, 55, 96, 61, 38, 72, 49, 88, 34].map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}</div><p><span>06:42</span><span>12:08</span></p></div>
+  </div>;
+}
+
+function WeatherVisual() {
+  return <div className="visual-scene weather-scene" aria-hidden="true">
+    <div className="weather-glow" />
+    <div className="cloud cloud-one" /><div className="cloud cloud-two" />
+    <div className="weather-phone">
+      <div className="weather-top"><span>VALENCIA</span><span>DOM 23 AGO</span></div>
+      <div className="weather-temp"><strong>24°</strong><p>Parcialmente nublado<br /><span>Sensación de 25°</span></p></div>
+      <div className="weather-hours"><div><span>AHORA</span><b>24°</b></div><div><span>17:00</span><b>25°</b></div><div><span>18:00</span><b>24°</b></div></div>
+    </div>
+    <p className="coming-copy">SOMETHING IS FORMING</p>
+  </div>;
+}
+
+export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
+  if (visual === "latetap") return <LateTapVisual />;
+  if (visual === "azahar") return <AzaharVisual />;
+  if (visual === "flujo") return <FlujoVisual />;
+  if (visual === "oratoria") return <OratoriaVisual />;
+  return <WeatherVisual />;
+}
