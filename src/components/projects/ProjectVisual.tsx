@@ -44,16 +44,27 @@ function OratoriaVisual() {
   </div>;
 }
 
-function WeatherVisual() {
+function AtmosVisual() {
   return <div className="visual-scene weather-scene" aria-hidden="true">
-    <div className="weather-glow" />
-    <div className="cloud cloud-one" /><div className="cloud cloud-two" />
-    <div className="weather-phone">
-      <div className="weather-top"><span>VALENCIA</span><span>DOM 23 AGO</span></div>
-      <div className="weather-temp"><strong>24°</strong><p>Parcialmente nublado<br /><span>Sensación de 25°</span></p></div>
-      <div className="weather-hours"><div><span>AHORA</span><b>24°</b></div><div><span>17:00</span><b>25°</b></div><div><span>18:00</span><b>24°</b></div></div>
+    <div className="atmos-sky" /><div className="atmos-haze" /><div className="atmos-grain" />
+    <div className="atmos-shell">
+      <div className="atmos-top"><span>MADRID&nbsp;⌄ &nbsp;·&nbsp; 20:55</span><p><b>AHORA</b><span>HOY</span><span>10 DÍAS</span></p></div>
+      <div className="atmos-layout">
+        <div className="atmos-current">
+          <div className="atmos-temp"><strong>31</strong><span>°</span></div>
+          <p className="atmos-condition">NUBES Y CLAROS</p>
+          <div className="atmos-summary"><span>SENSACIÓN&nbsp; 29°</span><span>MÁX&nbsp; 33°</span><span>MÍN&nbsp; 20°</span></div>
+          <p className="atmos-copy">Tarde calurosa con nubes y claros.</p>
+        </div>
+        <div className="atmos-detail">
+          <div className="atmos-section-title"><span>01&nbsp; PRÓXIMAS HORAS</span><b>24 H</b></div>
+          <div className="atmos-chart"><i /><i /><i /><i /><i /><em /></div>
+          <div className="atmos-hours"><span>20</span><span>00</span><span>04</span><span>08</span><span>12</span><span>16</span></div>
+          <div className="atmos-section-title second"><span>02&nbsp; AHORA MISMO</span></div>
+          <dl><div><dt>VIENTO</dt><dd>9 km/h</dd></div><div><dt>HUMEDAD</dt><dd>25 %</dd></div><div><dt>ÍNDICE UV</dt><dd>0 · BAJO</dd></div></dl>
+        </div>
+      </div>
     </div>
-    <p className="coming-copy">SOMETHING IS FORMING</p>
   </div>;
 }
 
@@ -62,5 +73,5 @@ export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
   if (visual === "azahar") return <AzaharVisual />;
   if (visual === "flujo") return <FlujoVisual />;
   if (visual === "oratoria") return <OratoriaVisual />;
-  return <WeatherVisual />;
+  return <AtmosVisual />;
 }
