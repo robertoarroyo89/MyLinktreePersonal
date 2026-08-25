@@ -1,12 +1,15 @@
+import Image from "next/image";
 import type { ProjectVisual as ProjectVisualName } from "@/types/project";
 
 function HabitsVisual() {
   return <div className="visual-scene habits-scene" aria-hidden="true">
     <div className="habits-orbit" />
-    <div className="habits-sprout"><i /><i /><span /></div>
     <div className="habits-window">
       <div className="habits-window-top"><span>HOY</span><b>4 / 6</b></div>
-      <strong>Un pequeño paso<br />también cuenta.</strong>
+      <div className="habits-window-hero">
+        <strong>Un pequeño paso<br />también cuenta.</strong>
+        <Image className="habits-mascot" src="/habitos-mascot.png" width={1199} height={1312} sizes="(min-width: 900px) 10rem, 6rem" alt="" />
+      </div>
       <div className="habits-progress"><i /></div>
       <small>4 de 6 completados</small>
       <div className="habits-list">

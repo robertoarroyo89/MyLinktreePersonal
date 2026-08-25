@@ -74,20 +74,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .habits-window { position: relative; z-index: 2; width: min(88%, 24rem); padding: 1.45rem; border: 1px solid rgba(74,55,43,.12); border-radius: 2.2rem; background: rgba(255,250,241,.86); box-shadow: 0 2rem 5rem rgba(101,70,50,.12); backdrop-filter: blur(12px); }
 .habits-window-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.1rem; font: 600 .48rem/1 var(--font-geist-mono), monospace; letter-spacing: .12em; color: #7d7065; }
 .habits-window-top b { padding: .42rem .65rem; border-radius: 999px; background: #edd7c3; color: #a86546; font-weight: 650; }
-.habits-window > strong { display: block; max-width: 17rem; font: 400 2.15rem/.92 Georgia, "Times New Roman", serif; letter-spacing: -.045em; }
+.habits-window-hero { display: grid; grid-template-columns: minmax(0, 1fr) 5.8rem; align-items: end; gap: .7rem; }
+.habits-window-hero strong { display: block; font: 400 2.05rem/.92 Georgia, "Times New Roman", serif; letter-spacing: -.045em; }
+.habits-mascot { width: 100%; height: auto; align-self: end; filter: drop-shadow(0 .9rem 1.2rem rgba(118,77,51,.14)); transform: translateY(.4rem); }
 .habits-progress { height: .38rem; margin-top: 1.8rem; overflow: hidden; border-radius: 999px; background: rgba(74,55,43,.11); }
 .habits-progress i { width: 67%; height: 100%; display: block; border-radius: inherit; background: #a86546; animation: habits-grow 1.2s cubic-bezier(.22,1,.36,1) both; }
 .habits-window > small { display: block; margin-top: .55rem; font: 500 .49rem var(--font-geist-mono), monospace; color: #7d7065; }
 .habits-list { margin-top: 1.35rem; }
 .habits-list div { padding: .68rem 0; display: flex; align-items: center; gap: .65rem; border-top: 1px solid rgba(74,55,43,.11); font-size: .68rem; font-weight: 620; }
 .habits-list i { width: 1.65rem; height: 1.65rem; display: grid; place-items: center; flex: 0 0 auto; border-radius: .58rem; background: #edd7c3; color: #a86546; font-style: normal; }
-.habits-sprout { position: absolute; z-index: 3; top: 6%; right: 4%; width: 5.5rem; height: 7rem; filter: drop-shadow(0 1rem 1.3rem rgba(118,77,51,.16)); animation: float 5.8s ease-in-out infinite; }
-.habits-sprout span { position: absolute; right: 1.2rem; bottom: 0; width: 2.8rem; height: 3.3rem; border-radius: 46% 54% 48% 52%; background: #a86546; transform: rotate(5deg); }
-.habits-sprout span::before, .habits-sprout span::after { content: ""; position: absolute; top: 1.05rem; width: .22rem; height: .22rem; border-radius: 50%; background: #fbf6ea; }
-.habits-sprout span::before { left: .8rem; }
-.habits-sprout span::after { right: .8rem; }
-.habits-sprout i { position: absolute; z-index: 1; top: .6rem; left: 1rem; width: 3.1rem; height: 1.8rem; border-radius: 100% 0 100% 0; background: #d1ddda; transform: rotate(28deg); transform-origin: right bottom; }
-.habits-sprout i:nth-child(2) { top: .35rem; left: 2.8rem; width: 2.55rem; height: 1.55rem; background: #ded3d9; transform: rotate(142deg); transform-origin: left bottom; }
 
 /* LateTap */
 .tap-orbit { position: absolute; top: 17%; left: 6%; width: min(68vw, 17rem); aspect-ratio: 1; display: grid; place-items: center; border: 1px solid rgba(255, 93, 71, 0.32); border-radius: 50%; box-shadow: 0 0 0 3rem rgba(255, 93, 71, 0.045), 0 0 0 6rem rgba(255, 93, 71, 0.022); animation: orbit-pulse 5s ease-in-out infinite; }
@@ -226,10 +221,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .tone-light .visual-scene { border-left-color: rgba(28,33,29,.14); }
   .project-card:nth-child(even) .visual-scene { border-left: 0; border-right: 1px solid currentColor; border-right-color: color-mix(in srgb, currentColor 14%, transparent); }
   .habits-window { width: min(78%, 33rem); padding: 2rem; border-radius: 2.65rem; }
-  .habits-window > strong { max-width: 24rem; font-size: 3.35rem; }
+  .habits-window-hero { grid-template-columns: minmax(0, 1fr) 9rem; gap: 1.1rem; }
+  .habits-window-hero strong { font-size: 3rem; }
   .habits-window-top { margin-bottom: 3.2rem; font-size: .55rem; }
   .habits-list div { padding: .9rem 0; font-size: .78rem; }
-  .habits-sprout { top: 7%; right: 8%; width: 8rem; height: 10rem; transform: scale(1.18); }
   .habits-orbit { width: min(27vw, 24rem); }
   .tap-orbit { top: 18%; left: 10%; width: min(28vw, 27rem); }
   .slot-card { width: 12rem; padding: 1rem; }
