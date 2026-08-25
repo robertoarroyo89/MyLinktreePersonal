@@ -1,5 +1,23 @@
 import type { ProjectVisual as ProjectVisualName } from "@/types/project";
 
+function HabitsVisual() {
+  return <div className="visual-scene habits-scene" aria-hidden="true">
+    <div className="habits-orbit" />
+    <div className="habits-sprout"><i /><i /><span /></div>
+    <div className="habits-window">
+      <div className="habits-window-top"><span>HOY</span><b>4 / 6</b></div>
+      <strong>Un pequeño paso<br />también cuenta.</strong>
+      <div className="habits-progress"><i /></div>
+      <small>4 de 6 completados</small>
+      <div className="habits-list">
+        <div><i>✓</i><span>Beber agua</span></div>
+        <div><i>✓</i><span>Caminar</span></div>
+        <div><i>·</i><span>Mis compromisos</span></div>
+      </div>
+    </div>
+  </div>;
+}
+
 function LateTapVisual() {
   return <div className="visual-scene latetap-scene" aria-hidden="true">
     <div className="slot-card slot-one"><span>HOY</span><strong>18:30</strong><small><i /> Disponible ahora</small></div>
@@ -59,6 +77,7 @@ function AtmosVisual() {
 }
 
 export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
+  if (visual === "habits") return <HabitsVisual />;
   if (visual === "latetap") return <LateTapVisual />;
   if (visual === "azahar") return <AzaharVisual />;
   if (visual === "flujo") return <FlujoVisual />;

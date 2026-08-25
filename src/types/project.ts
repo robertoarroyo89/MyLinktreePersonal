@@ -1,6 +1,7 @@
 export type ProjectStatus = "live" | "building" | "archived";
 
 export type ProjectVisual =
+  | "habits"
   | "latetap"
   | "azahar"
   | "flujo"
