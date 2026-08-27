@@ -53,6 +53,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-statement, .project-subtitle { margin: 0 0 0.7rem; font-size: 0.57rem; color: var(--project-accent); }
 .tone-light .project-statement, .tone-light .project-subtitle { color: color-mix(in srgb, var(--project-accent) 84%, #1c211d); }
 .project-copy h2 { margin: 0; font-size: clamp(4.15rem, 20vw, 8.5rem); font-weight: 560; line-height: 0.86; letter-spacing: -0.078em; }
+.project-supergym .project-copy h2 { font-size: clamp(3.6rem, 16vw, 6.8rem); letter-spacing: -0.085em; }
 .project-description { max-width: 28rem; margin: 1.25rem 0 0; font-size: 0.92rem; line-height: 1.54; color: rgba(255, 249, 239, 0.63); }
 .tone-light .project-description { color: rgba(28, 33, 29, 0.66); }
 .project-link { min-height: 3.35rem; padding: 0 0.95rem; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255, 249, 239, 0.25); font-size: 0.76rem; font-weight: 620; transition: background 260ms ease, color 260ms ease, border-color 260ms ease, transform 180ms ease; }
@@ -71,9 +72,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* SuperGym+ */
 .supergym-scene { isolation: isolate; color: #fff; background: #070a18; }
 .gym-glow { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 42% 24%, rgba(255,122,0,.2), transparent 34%), repeating-linear-gradient(115deg, transparent 0 2.8rem, rgba(255,122,0,.025) 2.85rem 2.9rem); }
-.gym-brand { position: absolute; top: 1.5rem; left: 1.2rem; display: flex; flex-direction: column; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; line-height: .76; letter-spacing: .015em; }
-.gym-brand span { font-size: .62rem; letter-spacing: .34em; color: rgba(232,238,255,.58); }
-.gym-brand strong { font-size: 2.5rem; font-weight: 700; }
+.gym-brand { position: absolute; top: 1.5rem; left: 1.2rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; line-height: 1; letter-spacing: .015em; }
+.gym-brand strong { font-size: 2rem; font-weight: 700; letter-spacing: .035em; font-style: italic; }
 .gym-brand em { color: #ff7a00; font-style: normal; }
 .gym-power-card { position: absolute; z-index: 2; top: 24%; left: 50%; width: min(88%, 25rem); padding: 1.15rem; display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,122,0,.42); border-radius: 1.25rem; background: linear-gradient(135deg, rgba(255,122,0,.18), rgba(18,24,45,.96) 55%); box-shadow: 0 2rem 4rem rgba(0,0,0,.32); transform: translateX(-50%); }
 .gym-power-mark { position: relative; width: 4.3rem; aspect-ratio: 1; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255,122,0,.5); border-radius: 50%; color: #ff7a00; background: rgba(255,122,0,.1); box-shadow: 0 0 2rem rgba(255,122,0,.14); }
@@ -240,13 +240,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-card:nth-child(even) .visual-wrap { grid-column: 1; }
   .project-meta { font-size: .58rem; }
   .project-copy h2 { font-size: clamp(5.3rem, 8.4vw, 8.7rem); }
+  .project-supergym .project-copy h2 { font-size: clamp(4.25rem, 6.2vw, 6.7rem); }
   .project-link { max-width: 23rem; }
   .visual-scene { min-height: 44rem; border-top: 0; border-left: 1px solid rgba(255,249,239,.14); }
   .tone-light .visual-scene { border-left-color: rgba(28,33,29,.14); }
   .project-card:nth-child(even) .visual-scene { border-left: 0; border-right: 1px solid currentColor; border-right-color: color-mix(in srgb, currentColor 14%, transparent); }
   .gym-brand { top: 2.5rem; left: 2.5rem; }
-  .gym-brand strong { font-size: 4.5rem; }
-  .gym-brand span { font-size: .8rem; }
+  .gym-brand strong { font-size: 3.15rem; }
   .gym-power-card { top: 28%; width: min(78%, 35rem); padding: 1.7rem; gap: 1.5rem; border-radius: 1.5rem; }
   .gym-power-mark { width: 6.2rem; }
   .gym-power-mark b { font-size: 1.6rem; }

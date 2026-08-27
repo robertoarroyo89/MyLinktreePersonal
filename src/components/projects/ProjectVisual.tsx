@@ -4,7 +4,7 @@ import type { ProjectVisual as ProjectVisualName } from "@/types/project";
 function SuperGymVisual() {
   return <div className="visual-scene supergym-scene" aria-hidden="true">
     <div className="gym-glow" />
-    <div className="gym-brand"><span>SUPER</span><strong>GYM<em>+</em></strong></div>
+    <div className="gym-brand"><strong>SUPERGYM<em>+</em></strong></div>
     <div className="gym-power-card">
       <div className="gym-power-mark"><i /><b>ZW</b></div>
       <div className="gym-power-copy">
