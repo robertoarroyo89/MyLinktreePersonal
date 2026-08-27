@@ -1,6 +1,29 @@
 import Image from "next/image";
 import type { ProjectVisual as ProjectVisualName } from "@/types/project";
 
+function SuperGymVisual() {
+  return <div className="visual-scene supergym-scene" aria-hidden="true">
+    <div className="gym-glow" />
+    <div className="gym-brand"><span>SUPER</span><strong>GYM<em>+</em></strong></div>
+    <div className="gym-power-card">
+      <div className="gym-power-mark"><i /><b>ZW</b></div>
+      <div className="gym-power-copy">
+        <small>NIVEL DE PODER</small>
+        <strong>Z WARRIOR</strong>
+        <p><span>640 XP</span><span>160 para Saiyan</span></p>
+        <div><i /></div>
+      </div>
+    </div>
+    <div className="gym-workout-card">
+      <small>ENTRENAMIENTO DE HOY</small>
+      <strong>PUSH DAY</strong>
+      <p><span>Press banca</span><b>4 × 8</b></p>
+      <p><span>Press militar</span><b>3 × 10</b></p>
+      <div className="gym-start">EMPEZAR</div>
+    </div>
+  </div>;
+}
+
 function HabitsVisual() {
   return <div className="visual-scene habits-scene" aria-hidden="true">
     <div className="habits-orbit" />
@@ -80,6 +103,7 @@ function AtmosVisual() {
 }
 
 export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
+  if (visual === "supergym") return <SuperGymVisual />;
   if (visual === "habits") return <HabitsVisual />;
   if (visual === "latetap") return <LateTapVisual />;
   if (visual === "azahar") return <AzaharVisual />;

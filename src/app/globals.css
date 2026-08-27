@@ -68,6 +68,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .visual-scene { position: relative; height: 100%; min-height: 24rem; overflow: hidden; border-top: 1px solid rgba(255, 249, 239, 0.14); }
 .tone-light .visual-scene { border-color: rgba(28, 33, 29, 0.14); }
 
+/* SuperGym+ */
+.supergym-scene { isolation: isolate; color: #fff; background: #070a18; }
+.gym-glow { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 42% 24%, rgba(255,122,0,.2), transparent 34%), repeating-linear-gradient(115deg, transparent 0 2.8rem, rgba(255,122,0,.025) 2.85rem 2.9rem); }
+.gym-brand { position: absolute; top: 1.5rem; left: 1.2rem; display: flex; flex-direction: column; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; line-height: .76; letter-spacing: .015em; }
+.gym-brand span { font-size: .62rem; letter-spacing: .34em; color: rgba(232,238,255,.58); }
+.gym-brand strong { font-size: 2.5rem; font-weight: 700; }
+.gym-brand em { color: #ff7a00; font-style: normal; }
+.gym-power-card { position: absolute; z-index: 2; top: 24%; left: 50%; width: min(88%, 25rem); padding: 1.15rem; display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,122,0,.42); border-radius: 1.25rem; background: linear-gradient(135deg, rgba(255,122,0,.18), rgba(18,24,45,.96) 55%); box-shadow: 0 2rem 4rem rgba(0,0,0,.32); transform: translateX(-50%); }
+.gym-power-mark { position: relative; width: 4.3rem; aspect-ratio: 1; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255,122,0,.5); border-radius: 50%; color: #ff7a00; background: rgba(255,122,0,.1); box-shadow: 0 0 2rem rgba(255,122,0,.14); }
+.gym-power-mark i { position: absolute; inset: -.75rem; border: 1px solid rgba(255,122,0,.18); border-radius: 50%; animation: gym-pulse 3s ease-out infinite; }
+.gym-power-mark b { font-size: 1.15rem; letter-spacing: -.04em; }
+.gym-power-copy { min-width: 0; flex: 1; }
+.gym-power-copy > small, .gym-workout-card > small { display: block; font: 700 .48rem/1 var(--font-geist-mono), monospace; letter-spacing: .15em; color: #ff7a00; }
+.gym-power-copy > strong { display: block; margin: .35rem 0 .65rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: 1.75rem; line-height: 1; letter-spacing: .025em; }
+.gym-power-copy p { margin: 0 0 .45rem; display: flex; justify-content: space-between; gap: .5rem; font: .47rem var(--font-geist-mono), monospace; color: rgba(232,238,255,.55); }
+.gym-power-copy > div { height: .3rem; overflow: hidden; border-radius: 99px; background: rgba(117,137,188,.22); }
+.gym-power-copy > div i { width: 64%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #ff7a00, #f7c948); box-shadow: 0 0 .8rem rgba(255,122,0,.5); animation: habits-grow 1.2s cubic-bezier(.22,1,.36,1) both; }
+.gym-workout-card { position: absolute; right: 4%; bottom: 7%; width: min(73%, 18rem); padding: 1rem; border: 1px solid rgba(117,137,188,.22); border-radius: 1.1rem; background: rgba(18,24,45,.9); box-shadow: 0 1.5rem 3rem rgba(0,0,0,.28); backdrop-filter: blur(14px); }
+.gym-workout-card > strong { display: block; margin: .4rem 0 .8rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: 1.55rem; letter-spacing: .025em; }
+.gym-workout-card p { margin: 0; padding: .55rem 0; display: flex; justify-content: space-between; border-top: 1px solid rgba(117,137,188,.18); font-size: .58rem; color: rgba(232,238,255,.68); }
+.gym-workout-card p b { color: #fff; font-weight: 650; }
+.gym-start { width: 100%; margin-top: .65rem; padding: .65rem; border-radius: .65rem; background: #ff7a00; color: #08101d; font: 800 .55rem var(--font-geist-mono), monospace; letter-spacing: .12em; text-align: center; }
+
 /* Habits */
 .habits-scene { display: grid; place-items: center; color: #3a3029; background: radial-gradient(circle at 83% 12%, rgba(239,183,146,.42), transparent 26%), linear-gradient(145deg, #fbf6ea 0%, #eadcc5 100%); }
 .habits-orbit { position: absolute; top: 9%; left: -14%; width: 15rem; aspect-ratio: 1; border: 1px solid rgba(74,55,43,.12); border-radius: 50%; box-shadow: 0 0 0 3.5rem rgba(255,250,241,.2); }
@@ -205,6 +228,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes weather-light { from { transform: translate3d(-8%, 3%, 0) scale(.95); } to { transform: translate3d(5%, -2%, 0) scale(1.08); } }
 @keyframes sun-breathe { from { transform: scale(.94); opacity: .78; } to { transform: scale(1.06); opacity: 1; } }
 @keyframes habits-grow { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
+@keyframes gym-pulse { 0% { opacity: 0; transform: scale(.78); } 45% { opacity: .75; } 100% { opacity: 0; transform: scale(1.22); } }
 
 @media (min-width: 900px) {
   .hero-copy h1 { font-size: clamp(6.5rem, 11.9vw, 11rem); }
@@ -220,6 +244,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .visual-scene { min-height: 44rem; border-top: 0; border-left: 1px solid rgba(255,249,239,.14); }
   .tone-light .visual-scene { border-left-color: rgba(28,33,29,.14); }
   .project-card:nth-child(even) .visual-scene { border-left: 0; border-right: 1px solid currentColor; border-right-color: color-mix(in srgb, currentColor 14%, transparent); }
+  .gym-brand { top: 2.5rem; left: 2.5rem; }
+  .gym-brand strong { font-size: 4.5rem; }
+  .gym-brand span { font-size: .8rem; }
+  .gym-power-card { top: 28%; width: min(78%, 35rem); padding: 1.7rem; gap: 1.5rem; border-radius: 1.5rem; }
+  .gym-power-mark { width: 6.2rem; }
+  .gym-power-mark b { font-size: 1.6rem; }
+  .gym-power-copy > strong { font-size: 2.8rem; }
+  .gym-power-copy p { font-size: .56rem; }
+  .gym-workout-card { right: 5%; bottom: 6%; width: min(47%, 23rem); padding: 1.35rem; }
+  .gym-workout-card > strong { font-size: 2.2rem; }
+  .gym-workout-card p { padding: .75rem 0; font-size: .66rem; }
   .habits-window { width: min(78%, 33rem); padding: 2rem; border-radius: 2.65rem; }
   .habits-window-hero { grid-template-columns: minmax(0, 1fr) 9rem; gap: 1.1rem; }
   .habits-window-hero strong { font-size: 3rem; }
