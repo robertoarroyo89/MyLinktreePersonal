@@ -44,6 +44,20 @@ function HabitsVisual() {
   </div>;
 }
 
+function DetoxVisual() {
+  return <div className="visual-scene detox-scene" aria-hidden="true">
+    <div className="detox-halo" />
+    <div className="detox-brand"><i /> Detox digital</div>
+    <p className="detox-phrase">Vuelve a mirar<br />hacia arriba.</p>
+    <div className="detox-progress-card">
+      <span>DÍA 08 / 30</span>
+      <strong>Tu atención vuelve a ti.</strong>
+      <div><i /></div>
+    </div>
+    <Image className="detox-capybara" src="/detox-capybara.webp" width={640} height={585} sizes="(min-width: 900px) 30rem, 18rem" alt="" />
+  </div>;
+}
+
 function LateTapVisual() {
   return <div className="visual-scene latetap-scene" aria-hidden="true">
     <div className="slot-card slot-one"><span>HOY</span><strong>18:30</strong><small><i /> Disponible ahora</small></div>
@@ -105,6 +119,7 @@ function AtmosVisual() {
 export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
   if (visual === "supergym") return <SuperGymVisual />;
   if (visual === "habits") return <HabitsVisual />;
+  if (visual === "detox") return <DetoxVisual />;
   if (visual === "latetap") return <LateTapVisual />;
   if (visual === "azahar") return <AzaharVisual />;
   if (visual === "flujo") return <FlujoVisual />;
