@@ -53,7 +53,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-statement, .project-subtitle { margin: 0 0 0.7rem; font-size: 0.57rem; color: var(--project-accent); }
 .tone-light .project-statement, .tone-light .project-subtitle { color: color-mix(in srgb, var(--project-accent) 84%, #1c211d); }
 .project-copy h2 { margin: 0; font-size: clamp(4.15rem, 20vw, 8.5rem); font-weight: 560; line-height: 0.86; letter-spacing: -0.078em; }
-.project-supergym .project-copy h2 { font-size: clamp(3.6rem, 16vw, 6.8rem); letter-spacing: -0.085em; }
+.project-setryn .project-copy h2 { font-size: clamp(4.15rem, 18vw, 7.5rem); }
 .project-description { max-width: 28rem; margin: 1.25rem 0 0; font-size: 0.92rem; line-height: 1.54; color: rgba(255, 249, 239, 0.63); }
 .tone-light .project-description { color: rgba(28, 33, 29, 0.66); }
 .project-link { min-height: 3.35rem; padding: 0 0.95rem; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255, 249, 239, 0.25); font-size: 0.76rem; font-weight: 620; transition: background 260ms ease, color 260ms ease, border-color 260ms ease, transform 180ms ease; }
@@ -69,27 +69,36 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .visual-scene { position: relative; height: 100%; min-height: 24rem; overflow: hidden; border-top: 1px solid rgba(255, 249, 239, 0.14); }
 .tone-light .visual-scene { border-color: rgba(28, 33, 29, 0.14); }
 
-/* SuperGym+ */
-.supergym-scene { isolation: isolate; color: #fff; background: #070a18; }
-.gym-glow { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 42% 24%, rgba(255,122,0,.2), transparent 34%), repeating-linear-gradient(115deg, transparent 0 2.8rem, rgba(255,122,0,.025) 2.85rem 2.9rem); }
-.gym-brand { position: absolute; top: 1.5rem; left: 1.2rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; line-height: 1; letter-spacing: .015em; }
-.gym-brand strong { font-size: 2rem; font-weight: 700; letter-spacing: .035em; font-style: italic; }
-.gym-brand em { color: #ff7a00; font-style: normal; }
-.gym-power-card { position: absolute; z-index: 2; top: 24%; left: 50%; width: min(88%, 25rem); padding: 1.15rem; display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(255,122,0,.42); border-radius: 1.25rem; background: linear-gradient(135deg, rgba(255,122,0,.18), rgba(18,24,45,.96) 55%); box-shadow: 0 2rem 4rem rgba(0,0,0,.32); transform: translateX(-50%); }
-.gym-power-mark { position: relative; width: 4.3rem; aspect-ratio: 1; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgba(255,122,0,.5); border-radius: 50%; color: #ff7a00; background: rgba(255,122,0,.1); box-shadow: 0 0 2rem rgba(255,122,0,.14); }
-.gym-power-mark i { position: absolute; inset: -.75rem; border: 1px solid rgba(255,122,0,.18); border-radius: 50%; animation: gym-pulse 3s ease-out infinite; }
-.gym-power-mark b { font-size: 1.15rem; letter-spacing: -.04em; }
-.gym-power-copy { min-width: 0; flex: 1; }
-.gym-power-copy > small, .gym-workout-card > small { display: block; font: 700 .48rem/1 var(--font-geist-mono), monospace; letter-spacing: .15em; color: #ff7a00; }
-.gym-power-copy > strong { display: block; margin: .35rem 0 .65rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: 1.75rem; line-height: 1; letter-spacing: .025em; }
-.gym-power-copy p { margin: 0 0 .45rem; display: flex; justify-content: space-between; gap: .5rem; font: .47rem var(--font-geist-mono), monospace; color: rgba(232,238,255,.55); }
-.gym-power-copy > div { height: .3rem; overflow: hidden; border-radius: 99px; background: rgba(117,137,188,.22); }
-.gym-power-copy > div i { width: 64%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #ff7a00, #f7c948); box-shadow: 0 0 .8rem rgba(255,122,0,.5); animation: habits-grow 1.2s cubic-bezier(.22,1,.36,1) both; }
-.gym-workout-card { position: absolute; right: 4%; bottom: 7%; width: min(73%, 18rem); padding: 1rem; border: 1px solid rgba(117,137,188,.22); border-radius: 1.1rem; background: rgba(18,24,45,.9); box-shadow: 0 1.5rem 3rem rgba(0,0,0,.28); backdrop-filter: blur(14px); }
-.gym-workout-card > strong { display: block; margin: .4rem 0 .8rem; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: 1.55rem; letter-spacing: .025em; }
-.gym-workout-card p { margin: 0; padding: .55rem 0; display: flex; justify-content: space-between; border-top: 1px solid rgba(117,137,188,.18); font-size: .58rem; color: rgba(232,238,255,.68); }
-.gym-workout-card p b { color: #fff; font-weight: 650; }
-.gym-start { width: 100%; margin-top: .65rem; padding: .65rem; border-radius: .65rem; background: #ff7a00; color: #08101d; font: 800 .55rem var(--font-geist-mono), monospace; letter-spacing: .12em; text-align: center; }
+/* Setryn */
+.setryn-scene { isolation: isolate; padding: 1.3rem 1.15rem 4.6rem; color: #edf2fa; background: #070b14; }
+.setryn-glow { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 78% 100%, rgba(255,91,18,.16), transparent 34%); }
+.setryn-header { display: flex; align-items: end; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid rgba(117,137,188,.2); }
+.setryn-header strong { font-size: 1.9rem; font-weight: 430; letter-spacing: -.06em; }
+.setryn-header span { padding-bottom: .2rem; font-size: .55rem; color: #909cb0; }
+.setryn-week { padding: 1.1rem 0; display: grid; grid-template-columns: repeat(7,1fr); border-bottom: 1px solid rgba(117,137,188,.2); text-align: center; }
+.setryn-week div { display: flex; flex-direction: column; align-items: center; gap: .42rem; }
+.setryn-week span { font: 600 .42rem var(--font-geist-mono), monospace; color: rgba(232,238,255,.4); }
+.setryn-week b { width: 1.55rem; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; font-size: .74rem; font-weight: 520; }
+.setryn-week .active b { background: #ff5b12; color: #070b14; font-weight: 720; }
+.setryn-rest { padding: 1rem 0; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .7rem; border-bottom: 1px solid rgba(117,137,188,.2); }
+.setryn-rest > i { width: 2rem; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: #1c263a; color: #edf2fa; font-style: normal; }
+.setryn-rest small { display: block; margin-bottom: .22rem; font: 600 .4rem var(--font-geist-mono), monospace; letter-spacing: .1em; color: rgba(232,238,255,.4); }
+.setryn-rest strong { font-size: .82rem; font-weight: 540; }
+.setryn-rest > b { font-size: 1rem; font-weight: 400; }
+.setryn-power, .setryn-achievements { padding: 1.1rem 1rem; border-bottom: 1px solid rgba(117,137,188,.2); }
+.setryn-power > span, .setryn-achievements > span { display: block; font: 700 .43rem var(--font-geist-mono), monospace; letter-spacing: .15em; color: #ff5b12; }
+.setryn-achievements > span { color: #f2c94c; }
+.setryn-power > strong, .setryn-achievements > strong { display: block; margin: .35rem 0; font-size: 1.25rem; font-weight: 560; letter-spacing: -.035em; }
+.setryn-power p { margin: 0 0 .45rem; display: flex; justify-content: space-between; gap: .5rem; color: #909cb0; }
+.setryn-power p small { font-size: .43rem; }
+.setryn-power > div { height: .28rem; overflow: hidden; border-radius: 99px; background: rgba(117,137,188,.26); }
+.setryn-power > div i { width: 18%; height: 100%; display: block; border-radius: inherit; background: #ff5b12; animation: habits-grow 1.2s cubic-bezier(.22,1,.36,1) both; }
+.setryn-achievements > strong { font-size: .82rem; }
+.setryn-achievements > div { margin-top: .7rem; display: grid; grid-template-columns: repeat(3,1fr); gap: .55rem; }
+.setryn-achievements i { height: 2.2rem; display: grid; place-items: center; border: 1px solid rgba(117,137,188,.2); border-radius: .55rem; background: #101725; color: #909cb0; font-style: normal; }
+.setryn-nav { position: absolute; z-index: 2; right: 1rem; bottom: 1rem; left: 1rem; padding: .8rem; display: grid; grid-template-columns: repeat(4,1fr); gap: .25rem; border: 1px solid rgba(255,91,18,.25); border-radius: 1rem; background: rgba(25,19,23,.88); box-shadow: 0 1rem 3rem rgba(0,0,0,.35); backdrop-filter: blur(14px); }
+.setryn-nav span { font-size: .45rem; color: rgba(237,242,250,.48); text-align: center; }
+.setryn-nav span:first-child { color: #ff5b12; }
 
 /* Habits */
 .habits-scene { display: grid; place-items: center; color: #3a3029; background: radial-gradient(circle at 83% 12%, rgba(239,183,146,.42), transparent 26%), linear-gradient(145deg, #fbf6ea 0%, #eadcc5 100%); }
@@ -241,7 +250,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes weather-light { from { transform: translate3d(-8%, 3%, 0) scale(.95); } to { transform: translate3d(5%, -2%, 0) scale(1.08); } }
 @keyframes sun-breathe { from { transform: scale(.94); opacity: .78; } to { transform: scale(1.06); opacity: 1; } }
 @keyframes habits-grow { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
-@keyframes gym-pulse { 0% { opacity: 0; transform: scale(.78); } 45% { opacity: .75; } 100% { opacity: 0; transform: scale(1.22); } }
 
 @media (min-width: 900px) {
   .hero-copy h1 { font-size: clamp(6.5rem, 11.9vw, 11rem); }
@@ -253,21 +261,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-card:nth-child(even) .visual-wrap { grid-column: 1; }
   .project-meta { font-size: .58rem; }
   .project-copy h2 { font-size: clamp(5.3rem, 8.4vw, 8.7rem); }
-  .project-supergym .project-copy h2 { font-size: clamp(4.25rem, 6.2vw, 6.7rem); }
+  .project-setryn .project-copy h2 { font-size: clamp(4.8rem, 7vw, 7rem); }
   .project-link { max-width: 23rem; }
   .visual-scene { min-height: 44rem; border-top: 0; border-left: 1px solid rgba(255,249,239,.14); }
   .tone-light .visual-scene { border-left-color: rgba(28,33,29,.14); }
   .project-card:nth-child(even) .visual-scene { border-left: 0; border-right: 1px solid currentColor; border-right-color: color-mix(in srgb, currentColor 14%, transparent); }
-  .gym-brand { top: 2.5rem; left: 2.5rem; }
-  .gym-brand strong { font-size: 3.15rem; }
-  .gym-power-card { top: 28%; width: min(78%, 35rem); padding: 1.7rem; gap: 1.5rem; border-radius: 1.5rem; }
-  .gym-power-mark { width: 6.2rem; }
-  .gym-power-mark b { font-size: 1.6rem; }
-  .gym-power-copy > strong { font-size: 2.8rem; }
-  .gym-power-copy p { font-size: .56rem; }
-  .gym-workout-card { right: 5%; bottom: 6%; width: min(47%, 23rem); padding: 1.35rem; }
-  .gym-workout-card > strong { font-size: 2.2rem; }
-  .gym-workout-card p { padding: .75rem 0; font-size: .66rem; }
+  .setryn-scene { padding: 2.5rem 3rem 6.2rem; }
+  .setryn-header { padding-bottom: 1.5rem; }
+  .setryn-header strong { font-size: 3rem; }
+  .setryn-header span { font-size: .68rem; }
+  .setryn-week { padding: 1.7rem 0; }
+  .setryn-week span { font-size: .52rem; }
+  .setryn-week b { width: 2.25rem; font-size: 1rem; }
+  .setryn-rest { padding: 1.35rem 0; }
+  .setryn-rest > i { width: 2.8rem; }
+  .setryn-rest strong { font-size: 1rem; }
+  .setryn-power, .setryn-achievements { padding: 1.5rem 1.25rem; }
+  .setryn-power > strong { font-size: 1.8rem; }
+  .setryn-achievements > strong { font-size: 1rem; }
+  .setryn-achievements i { height: 3.2rem; }
+  .setryn-nav { right: 3rem; bottom: 1.8rem; left: 3rem; padding: 1.05rem; }
+  .setryn-nav span { font-size: .55rem; }
   .habits-window { width: min(78%, 33rem); padding: 2rem; border-radius: 2.65rem; }
   .habits-window-hero { grid-template-columns: minmax(0, 1fr) 9rem; gap: 1.1rem; }
   .habits-window-hero strong { font-size: 3rem; }

@@ -1,26 +1,24 @@
 import Image from "next/image";
 import type { ProjectVisual as ProjectVisualName } from "@/types/project";
 
-function SuperGymVisual() {
-  return <div className="visual-scene supergym-scene" aria-hidden="true">
-    <div className="gym-glow" />
-    <div className="gym-brand"><strong>SUPERGYM<em>+</em></strong></div>
-    <div className="gym-power-card">
-      <div className="gym-power-mark"><i /><b>ZW</b></div>
-      <div className="gym-power-copy">
-        <small>NIVEL DE PODER</small>
-        <strong>Z WARRIOR</strong>
-        <p><span>640 XP</span><span>160 para Saiyan</span></p>
-        <div><i /></div>
-      </div>
+function SetrynVisual() {
+  return <div className="visual-scene setryn-scene" aria-hidden="true">
+    <div className="setryn-glow" />
+    <div className="setryn-header"><strong>Setryn</strong><span>Esta semana</span></div>
+    <div className="setryn-week">
+      <div><span>LU</span><b>24</b></div><div><span>MA</span><b>25</b></div><div><span>MI</span><b>26</b></div><div><span>JU</span><b>27</b></div><div><span>VI</span><b>28</b></div><div><span>SÁ</span><b>29</b></div><div className="active"><span>DO</span><b>30</b></div>
     </div>
-    <div className="gym-workout-card">
-      <small>ENTRENAMIENTO DE HOY</small>
-      <strong>PUSH DAY</strong>
-      <p><span>Press banca</span><b>4 × 8</b></p>
-      <p><span>Press militar</span><b>3 × 10</b></p>
-      <div className="gym-start">EMPEZAR</div>
+    <div className="setryn-rest"><i>☾</i><div><small>HOY</small><strong>Día de descanso</strong></div><b>+</b></div>
+    <div className="setryn-power">
+      <span>NIVEL DE PODER</span><strong>Base</strong>
+      <p><small>0 XP de entrenamiento</small><small>300 para Chispa</small></p>
+      <div><i /></div>
     </div>
+    <div className="setryn-achievements">
+      <span>LOGROS</span><strong>0 de 61 desbloqueados</strong>
+      <div><i>◇</i><i>◇</i><i>◇</i></div>
+    </div>
+    <div className="setryn-nav"><span>Inicio</span><span>Planes</span><span>Entrenar</span><span>Progreso</span></div>
   </div>;
 }
 
@@ -117,7 +115,7 @@ function AtmosVisual() {
 }
 
 export function ProjectVisual({ visual }: { visual: ProjectVisualName }) {
-  if (visual === "supergym") return <SuperGymVisual />;
+  if (visual === "setryn") return <SetrynVisual />;
   if (visual === "habits") return <HabitsVisual />;
   if (visual === "detox") return <DetoxVisual />;
   if (visual === "latetap") return <LateTapVisual />;
